@@ -25,6 +25,9 @@ Il veut valoriser les livres et de mettre une fois par mois un livre en avant.
 Accueil, organiser une expo, voir l'expo, voir la bibliothèque, Contact (formulaire) pour un contact 'presse'
 * Accueil: Dernière news de la page facebook (possibilité de poster sur facebook et ça se mettra à jour sur la page d'accueil)
 
+## Public cible
+* Les photographes, étudiant en art et en photo
+
 ## *Ressource*
 * lesdrapiers.be
 * imagesansnom.trumble.com
