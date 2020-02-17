@@ -19,7 +19,7 @@ Il veut valoriser les livres et de mettre une fois par mois un livre en avant.
 * Multi-lingue
 * Menu libre
 * Titre: utiliser la typo donnée
-* Texte: utiliser une type fonctionnant avec la typo des titres et elle sera prise pour tout support
+* Texte: utiliser une typo fonctionnant avec la typo des titres et elle sera prise pour tout support
   
 ## Les pages
 Accueil, organiser une expo, voir l'expo, voir la bibliothèque, Contact (formulaire) pour un contact 'presse'
