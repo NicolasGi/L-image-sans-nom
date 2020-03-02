@@ -3,11 +3,8 @@
 ## Accueil
 ### Nav
 `Accueil Exposition Bibliothèque Info Contact `
-<br />
-`Header` je vois la navigation.. 
-<br /> 
 
-* Deuxème section avec les prochaines expositions à venir
+* Les prochaines expositions à venir
 * Le livre du mois
 * Les news de facebook
 * Des photos du moment 
