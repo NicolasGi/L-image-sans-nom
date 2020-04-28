@@ -3,6 +3,7 @@
 /* variable*/
 $bck-body:#181818;
 $font-title-family:'Novecento';
+$font-principal: 'Lexend';
 $font-size:10px;
 $font-title-color:rgb(255, 230, 0);
 $font-border-color:rgba(255, 230, 0,0.5);
@@ -14,8 +15,10 @@ $font-border-color:rgba(255, 230, 0,0.5);
 }
 body{
   font-size: $font-size;
+  font-family: $font-principal;
   background-color: $bck-body;
   color:white;
+
   //overflow: hidden;
 }
 nav {
@@ -41,14 +44,18 @@ nav {
       color: $bck-body;
       text-shadow: -1px 0 $font-title-color, 0 1px $font-title-color, 1px 0 $font-title-color, 0 -1px $font-title-color;
     }
-    li:hover, a:hover, .focus{
+
+   a:hover, .focus{
       color:$font-title-color;
       text-shadow: 0 0 $font-title-color;
     }
 
   }
 }
-
+h1, h2, h3, h4{
+  font-family: $font-title-family;
+  color: $font-title-color;
+}
 @keyframes menu {
   0%{
     opacity: 0;
@@ -105,7 +112,59 @@ div.heading{
   margin: 5em 7em;
   border:5px solid $font-border-color;
 }
+canvas{
+  margin:0 150px;
+}
+section{
+  border-bottom: 1px solid $font-border-color;
+  padding: 10px;
+}
+.facebook, .event, .library, .book{
+  font-size: 3em;
+  .facebook__title, .event__title, .library__title, .book__title{
+    margin: 20px 0;
+    h2{
+      font-size: 2em;
+      letter-spacing: -0.08em;
+    }
+    p{
+      color: $font-title-color;
+      font-size: 1.3em;
+    }
+  }
+  .txt{
+    text-align: left;
+    line-height: 50px;
+    font-size: 1.3em;
+  }
+}
 
+.event{
+  .event__date{
+    display: flex;
+    p:nth-child(2){
+      align-self: flex-start;
+      margin-top: 30px;
+      font-size: 1em;
+    }
+  }
+  .event__subtitle{
+    text-align: right;
+  }
+  .event__date__day{
+    font-size:4em;
+    font-family: $font-title-family;
+    color: $font-title-color;
+  }
+  .event__card{
+    h3{
+      font-size: 1.1em;
+    }
+    .txt{
+
+    }
+  }
+}
 /*
 h1{
   font-size: 10em;
@@ -133,9 +192,6 @@ h1:nth-child(2) {
 
 .flex{
   display: flex;
-}
-canvas{
-  margin:0 150px;
 }
 .grid{
   min-height: 100vh;
