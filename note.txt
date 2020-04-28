@@ -1,0 +1,33 @@
+Olivier cornil est photographe, membre image sans nom prof à st Luc
+
+historique: à st leonard sur une place, ils se sont mit là car son ami stockait des livres sur la photographie et arriver il y a deux ans sur liege il lui a demander de partager son atelier pour faire des tirages photos, ils font souvent des expos, la piece principal est louer souvent utiliser pour les réunions, il y a masse expo, pas d'argent, pour l'amour de l'art , des architecte y travaillent
+
+il veut une interface assez simple a mettre à jour, et il veut travailler sur 2 aspect, un focus sur les livre et sur les expos, il utilise les vitrine pour exposer leurs photos, il a une base graphique pour les bannières,  on doit retouver l'aspect graphique des affiches utiliser 
+
+Il veut valoriser les livres et de mettre une fois par mois un livre en avant 
+2interface un expo, un livre. (lesdrapiers.be) (imagesansnom.trumble.com) (c-d-l-t.com)(vincentdelbrouck.be)
+
+#Pour la bibliothèque assez simple et sobre (https://tipi-bookshop.be/) (le livre présenter=>description, photos voir vidéo (occasionnellement))
+la mise en page des images est important et qu'on voit l'image en masse 
+Les gens peuvent s'inscire sur un newsletter 
+
+Du texte sous l'image  car il veut que l'image sois devant son texte
+Multi-lingue (webpml) language switcher !important!à prévoir! 
+L'aventure moderne, on n'a pas de limite, mouvement, assez sympas aller dans le barge 
+
+Contact, organiser une expo, voir l'expo, voir la bibliothèque, (formulaire) pour un contact 'presse' 
+
+Pour les titres, on aura la typo d'Olivier mais pour le texte avec une typo qui s'associer et qui sera prise partout (pour un maximum d'interface)
+#menu: LA LIBERTER
+
+20mars il y a un vernissage (à partir de 20h) 
+
+
+(Section , dernière news sur facebook)
+(possibilité de poster sur face book et que ça se mette sur le site?)
+
+cahier de charge, plan du site, 
+
+oli@oliviercornil.be
+
+###

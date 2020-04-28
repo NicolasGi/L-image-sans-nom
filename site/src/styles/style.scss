@@ -1,0 +1,157 @@
+@import "reset.scss";
+@import "font";
+/* variable*/
+$bck-body:#181818;
+$font-title-family:'Novecento';
+$font-size:10px;
+$font-title-color:rgb(255, 230, 0);
+$font-border-color:rgba(255, 230, 0,0.5);
+/* HEADER */
+.hidden{
+  overflow: hidden;
+  text-indent: -9999px;
+  position: absolute;
+}
+body{
+  font-size: $font-size;
+  background-color: $bck-body;
+  color:white;
+  //overflow: hidden;
+}
+nav {
+  min-height: 100vh;
+
+  ul{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 30px;
+
+    &.flex {
+      flex-direction: column;
+    }
+    &.active{
+      animation: menu .5s ease-in-out;
+    }
+    li{
+      cursor: pointer;
+      margin: 5px 0 25px;
+      font-size: 3em;
+      font-family: $font-title-family;
+      color: $bck-body;
+      text-shadow: -1px 0 $font-title-color, 0 1px $font-title-color, 1px 0 $font-title-color, 0 -1px $font-title-color;
+    }
+    li:hover, a:hover, .focus{
+      color:$font-title-color;
+      text-shadow: 0 0 $font-title-color;
+    }
+
+  }
+}
+
+@keyframes menu {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+div.toggle{
+  position: absolute;
+  height: 46px;
+  width: 46px;
+  right: 15px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+}
+.burger-menu{
+  position: relative;
+  width:40px;
+  height: 2px;
+  background-color: $font-title-color;
+  &:after, &:before{
+    position: absolute;
+    content:'';
+    width: 35px;
+    height: 100%;
+    background-color: inherit;
+    transform-origin: center center;
+    transition: transform .25s ease, top .25s ease, bottom .25s ease;
+    left:5px;
+  }
+  &:before{
+    top:-10px;
+  }
+  &:after{
+    bottom: -10px;
+  }
+}
+a{
+  color:$bck-body;
+  text-decoration: none;
+}
+div.heading{
+  position: absolute;
+  min-height: 85vh;
+  min-width: 85vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5em 7em;
+  border:5px solid $font-border-color;
+}
+
+/*
+h1{
+  font-size: 10em;
+  //margin: 0.5em;
+  color: $font-title-color;
+  font-family: $font-title-family;
+
+  display: flex;
+  //justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  span:nth-child(1){
+    margin-right: auto;
+  }
+  span:nth-child(3){
+    margin-right: auto;
+  }
+
+}
+h1:nth-child(2) {
+  margin-top: auto;
+}
+*/
+
+.flex{
+  display: flex;
+}
+canvas{
+  margin:0 150px;
+}
+.grid{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: column;
+  justify-content: stretch;
+  grid-column-gap:20px;
+  .grid__img{
+    width: 100%;
+    height: 90%;
+  }
+  @for $i from 1 through 6{
+    .grid__img:nth-child(#{$i}){
+        grid-column: #{$i}/#{$i+2};
+    }
+  }
+}
