@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/style.css">
-    <title>Document</title>
+    <title>Title about this page</title>
 </head>
-<body>
+<body class="flex">
 <header>
     <!--<div class="heading" role="heading">
         <h1><span>L'</span><span>image</span></h1><br>
@@ -31,7 +31,7 @@
         </ul>
     </nav>
 </header>
-<main role="main">
+<main role="main" class="flex">
     <section class="facebook" role="feed">
         <div class="facebook__feed">
             <div class="facebook__title">
@@ -39,13 +39,18 @@
                 <p>Les dernières actualités</p>
             </div>
             <div class="facebook__card">
-                <img class="facebook__img"  src="" srcset="" sizes="" width="" height="" alt="Photo prise par Alvarez Valle Cathy d'une cathédrale de.." title="photo prise par Alvarez Valle Cathy">
+                <div class="img">
+                    <img class="facebook__img"  src="" srcset="./dist/assets/img/cathe-320.jpg 320w, ./dist/assets/img/cathe-640.jpg 640w" sizes="(min-width:980px) 30vw, (min-width: 640px) 60vw,  95vw"   width="" height="" alt="Photo prise par Alvarez Valle Cathy d'une cathédrale de.." title="photo prise par Alvarez Valle Cathy">
+                </div>
                 <p class="facebook__txt txt ">
                     En attendant de pouvoir vous inviter à la magnifique exposition que Alvarez Valle Cathy a préparé pour vous..
                 </p>
             </div>
             <div class="facebook__card" >
-                <img class="facebook__img" src="" srcset="" sizes="" width="" height="" alt="Vernissage apéro, un live instagram le vendredi 18:00" title="Affiche pour le vernissage de Henri C">
+                <div class="img">
+                    <img class="facebook__img" src="" srcset="./dist/assets/img/affiche-320.jpg 320w, ./dist/assets/img/affiche-640.jpg 640w" sizes="(min-width:980px) 30vw, (min-width: 640px) 60vw,  95vw" width="" height="" alt="Vernissage apéro, un live instagram le vendredi 18:00" title="Affiche pour le vernissage de Henri C">
+
+                </div>
                 <p class="facebook__txt txt">
                     Ce vendredi 20 Mars, nous organisons un apéro LIVE instagram et conversation avec Camille Carb pour le lancement du livre 'Quand l'océan se retire de Henri C' chez Macaonibook.
                 </p>
@@ -68,11 +73,13 @@
         </div>
         <div class="event__card">
             <h3 class="event_name_artist">Edouard Decam</h3>
-            <img src="" srcset="" sizes="" alt="" width="" height="">
+            <div class="img">
+                <img src="" srcset="./dist/assets/img/affiche-jean-320.jpg 320w, ./dist/assets/img/affiche-jean-640.jpg 640w" sizes="(min-width:980px) 30vw, (min-width: 640px) 50vw,  95vw" alt="" width="" height="">
+            </div>
             <p class="event_txt txt">
                 Ce vendredi 29 Janvier, nous organisons un apéro LIVE instagram et conversation avec Camille Carb pour le lancement du livre 'Quand l'océan se retire de Henri C' chez Macaonibook.
             </p>
-            <a href="" class="btn btn-a">Voir les prochains vernissages</a>
+            <a href="" class="btn btn-a flex">Voir les prochains vernissages</a>
         </div>
     </section>
     <section class="library">
@@ -81,7 +88,10 @@
             <p>un espace dédié aux livres</p>
         </div>
         <div class="library__card">
-            <img src="" srcset="" sizes="" alt="" width="" height="" >
+            <div class="img">
+                <img src="" srcset="./dist/assets/img/biblio-320.jpg 320w, ./dist/assets/img/biblio-640.jpg 640w" sizes="(min-width:980px) 50vw, (min-width: 640px) 50vw,  95vw" alt="" width="" height="" >
+
+            </div>
             <p class="library_txt txt">
                 Un lieu pour les livres et la photographie
                 L’Image sans nom est lieu d’expositions. Il est aussi un centre de documentation : fort de quelques milliers de titres, principalement de
@@ -92,7 +102,13 @@
                 Un lieu à taille humaine et à hauteur d’images, pour prendre le temps de grignoter avec les yeux, découvrir, échanger!t
             </p>
             <button>Voir plus</button>
-            <a href="" class="btn btn-a">Visitez la bibliothèque</a>
+            <a href="" class="btn btn-a">Visitez la bibliothèque 
+                <span>
+                    <svg version="1.1"
+                         baseProfile="full"
+                         xmlns="http://www.w3.org/2000/svg">
+                    </svg>
+                </span></a>
 
         </div>
     </section>
@@ -103,7 +119,9 @@
         </div>
         <div class="book__card">
             <h3 aria-level="3">Buenos aires XXMIII</h3>
-            <img src="" srcset="" sizes="" alt="" width="" height="" >
+            <div class="img">
+                <img src="" srcset="./dist/assets/img/book-320.jpg 320w, ./dist/assets/img/book-640.jpg 640w" sizes="(min-width:980px) 50vw, (min-width: 640px) 50vw,  95vw" alt="" width="" height="" >
+            </div>
             <p class="book__txt txt">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore mollitia porro quidem? Ab aliquam doloremque optio! Dicta dolorum eaque eius, iste itaque neque numquam quaerat quos voluptas voluptatem voluptates voluptatum!
             </p>
@@ -111,8 +129,8 @@
             <a href="" class="btn btn-a">Voir les informations </a>
         </div>
     </section>
-<canvas></canvas>
+
 </main>
-<script src="./dist/main.js"></script>
+<!--<script src="./dist/main.js"></script>-->
 </body>
 </html>
