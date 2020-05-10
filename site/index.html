@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/style.css">
-    <title>Title about this page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <title>Accueil | L'Image Sans Nom</title>
 </head>
 <body class="flex">
 <header>
-    <!--<div class="heading" role="heading">
+    <!--
+    <div class="heading" role="heading">
         <h1><span>L'</span><span>image</span></h1><br>
         <h1><span>sans</span><span>nom</span></h1>
     </div>
@@ -22,12 +24,12 @@
         </div>
 
         <ul class="flex hidden">
-            <li><a href="" class="focus">accueil</a></li>
-            <li><a href="">actualité</a></li>
-            <li><a href="">événement</a></li>
-            <li><a href="">bibliothéque</a></li>
-            <li><a href="">livre du mois</a></li>
-            <li><a href="">contact</a></li>
+            <li><a href="#" class="focus">accueil</a></li>
+            <li><a href="#actus">actualité</a></li>
+            <li><a href="#event">événement</a></li>
+            <li><a href="#library">bibliothéque</a></li>
+            <li><a href="#book">livre du mois</a></li>
+            <li><a href="./dist/pages/contact.html">contact</a></li>
         </ul>
     </nav>
 </header>
@@ -38,27 +40,29 @@
                 <h2 aria-level="2" >l'image sans nom,</h2>
                 <p>Les dernières actualités</p>
             </div>
-            <div class="facebook__card">
+            <div class="facebook__card flex" id="actus">
                 <div class="img">
-                    <img class="facebook__img"  src="" srcset="./dist/assets/img/cathe-320.jpg 320w, ./dist/assets/img/cathe-640.jpg 640w" sizes="(min-width:980px) 30vw, (min-width: 640px) 60vw,  95vw"   width="" height="" alt="Photo prise par Alvarez Valle Cathy d'une cathédrale de.." title="photo prise par Alvarez Valle Cathy">
+                    <img class="facebook__img"  src="" srcset="./dist/assets/img/320/cathe-320.jpg 330w, ./dist/assets/img/640/cathe-640.jpg 640w" sizes="(min-width:980px) 30vw, (min-width: 640px) 60vw,  100vw"   width="320" height="auto" alt="Photo prise par Alvarez Valle Cathy d'une cathédrale de.." title="photo prise par Alvarez Valle Cathy">
                 </div>
                 <p class="facebook__txt txt ">
                     En attendant de pouvoir vous inviter à la magnifique exposition que Alvarez Valle Cathy a préparé pour vous..
                 </p>
             </div>
-            <div class="facebook__card" >
+            <div class="facebook__card flex" >
                 <div class="img">
-                    <img class="facebook__img" src="" srcset="./dist/assets/img/affiche-320.jpg 320w, ./dist/assets/img/affiche-640.jpg 640w" sizes="(min-width:980px) 30vw, (min-width: 640px) 60vw,  95vw" width="" height="" alt="Vernissage apéro, un live instagram le vendredi 18:00" title="Affiche pour le vernissage de Henri C">
+                    <img class="facebook__img" src="" srcset="./dist/assets/img/320/affiche-320.jpg 330w, ./dist/assets/img/640/affiche-640.jpg 640w" sizes="(min-width:980px) 30vw, (min-width: 640px) 60vw,  100vw" width="320" height="auto" alt="Vernissage apéro, un live instagram le vendredi 18:00" title="Affiche pour le vernissage de Henri C">
 
                 </div>
                 <p class="facebook__txt txt">
                     Ce vendredi 20 Mars, nous organisons un apéro LIVE instagram et conversation avec Camille Carb pour le lancement du livre 'Quand l'océan se retire de Henri C' chez Macaonibook.
                 </p>
+                <a href="https://www.facebook.com/pg/limagesansnom/posts/?ref=page_internal" target="_blank" class="btn btn-a">Visitez notre page facebook</a>
             </div>
+
         </div>
     </section>
 
-    <section class="event">
+    <section class="event" id="event">
         <div class="event__title">
             <h2 aria-level="2" >l'image sans nom,</h2>
             <p>Futurs événements</p>
@@ -71,25 +75,25 @@
             <h3>Vernissage</h3>
             <p>La limite des territoires</p>
         </div>
-        <div class="event__card">
+        <div class="event__card flex">
             <h3 class="event_name_artist">Edouard Decam</h3>
             <div class="img">
-                <img src="" srcset="./dist/assets/img/affiche-jean-320.jpg 320w, ./dist/assets/img/affiche-jean-640.jpg 640w" sizes="(min-width:980px) 30vw, (min-width: 640px) 50vw,  95vw" alt="" width="" height="">
+                <img src="" srcset="./dist/assets/img/320/affiche-jean-320.jpg 330w, ./dist/assets/img/640/affiche-jean-640.jpg 640w" sizes="(min-width:980px) 30vw, (min-width: 640px) 50vw,  95vw" alt="" width="320" height="auto">
             </div>
             <p class="event_txt txt">
                 Ce vendredi 29 Janvier, nous organisons un apéro LIVE instagram et conversation avec Camille Carb pour le lancement du livre 'Quand l'océan se retire de Henri C' chez Macaonibook.
             </p>
-            <a href="" class="btn btn-a flex">Voir les prochains vernissages</a>
+            <a href="./dist/pages/event.html" class="btn btn-a flex">Voir les prochains vernissages</a>
         </div>
     </section>
-    <section class="library">
+    <section class="library" id="library">
         <div class="library__title">
             <h2 aria-level="2" >l'image sans nom,</h2>
-            <p>un espace dédié aux livres</p>
+            <p>Un espace dédié aux livres</p>
         </div>
-        <div class="library__card">
+        <div class="library__card flex">
             <div class="img">
-                <img src="" srcset="./dist/assets/img/biblio-320.jpg 320w, ./dist/assets/img/biblio-640.jpg 640w" sizes="(min-width:980px) 50vw, (min-width: 640px) 50vw,  95vw" alt="" width="" height="" >
+                <img src="" srcset="./dist/assets/img/320/biblio-320.jpg 330w, ./dist/assets/img/640/biblio-640.jpg 640w" sizes="(min-width:980px) 50vw, (min-width: 640px) 50vw,  95vw" alt="" width="320" height="auto" >
 
             </div>
             <p class="library_txt txt">
@@ -101,36 +105,30 @@
                 Le lieu se veut un point de rencontre pour tous les amateurs ou amoureux de livres et de photographie, et il propose depuis février 2018, sous la houlette d’Olivier Cornil, Emmanuel d’Autreppe, Christophe Collas et Matthieu Litt une série d’événements (pour) petits et grands, ateliers et rencontres, lectures et projections, expositions et interventions, séminaires et réveillons…
                 Un lieu à taille humaine et à hauteur d’images, pour prendre le temps de grignoter avec les yeux, découvrir, échanger!t
             </p>
-            <button>Voir plus</button>
-            <a href="" class="btn btn-a">Visitez la bibliothèque 
-                <span>
-                    <svg version="1.1"
-                         baseProfile="full"
-                         xmlns="http://www.w3.org/2000/svg">
-                    </svg>
-                </span></a>
-
+            <div class="button">
+                <button>Voir plus</button>
+            </div>
+            <a href="./dist/pages/contact.html" class="btn btn-a">Visitez la bibliothèque</a>
         </div>
     </section>
-    <section class="book">
+    <section class="book" id="book">
         <div class="book__title">
             <h2 aria-level="2" >l'image sans nom,</h2>
             <p>vous propose le livre du mois</p>
         </div>
-        <div class="book__card">
+        <div class="book__card flex">
             <h3 aria-level="3">Buenos aires XXMIII</h3>
             <div class="img">
-                <img src="" srcset="./dist/assets/img/book-320.jpg 320w, ./dist/assets/img/book-640.jpg 640w" sizes="(min-width:980px) 50vw, (min-width: 640px) 50vw,  95vw" alt="" width="" height="" >
+                <img src="" srcset="./dist/assets/img/320/book-320.jpg 330w, ./dist/assets/img/640/book-640.jpg 640w" sizes="(min-width:980px) 50vw, (min-width: 640px) 50vw,  95vw" alt="" width="320" height="auto" >
             </div>
             <p class="book__txt txt">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore mollitia porro quidem? Ab aliquam doloremque optio! Dicta dolorum eaque eius, iste itaque neque numquam quaerat quos voluptas voluptatem voluptates voluptatum!
             </p>
-
-            <a href="" class="btn btn-a">Voir les informations </a>
+            <a href="./dist/pages/book.html" class="btn btn-a">Voir les informations </a>
         </div>
     </section>
 
 </main>
-<!--<script src="./dist/main.js"></script>-->
+<script src="./dist/main.js"></script>
 </body>
 </html>

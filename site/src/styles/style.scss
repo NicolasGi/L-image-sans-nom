@@ -1,35 +1,39 @@
-
 /* variable*/
-$bck-body:#181818;
-$font-title-family:'Novecento';
-$font-principal: 'Lexend';
-$font-size:10px;
-$font-title-color:rgb(255, 230, 0);
-$font-border-color:rgba(255, 230, 0,0.5);
+$bck-body: #181818;
+$font-title-family: 'Novecentowide-Bold';
+$font-principal: 'Lexend Deca', sans-serif;
+$font-size: 62.5%;
+$font-title-color: rgb(255, 230, 0);
+$font-border-color: rgba(255, 230, 0, 0.5);
 /* IMPORT */
 @import "reset.scss";
 @import "font";
 @import "graphic";
+@import "slide";
+@import "animation";
+@import "form";
 
 /* HEADER */
-.hidden{
+.hidden {
   overflow: hidden;
   text-indent: -9999px;
   position: absolute;
 }
-body{
+
+body {
   font-size: $font-size;
   font-family: $font-principal;
   background-color: $bck-body;
-  color:white;
+  color: white;
   flex-direction: column;
 
   //overflow: hidden;
 }
+
 nav {
   min-height: 100vh;
 
-  ul{
+  ul {
     width: 80%;
     height: 100%;
     margin: 0 auto;
@@ -38,10 +42,7 @@ nav {
     &.flex {
       flex-direction: column;
     }
-    &.active{
-      animation: menu .5s ease-in-out;
-    }
-    li{
+    li {
       cursor: pointer;
       margin: 5px 0 25px;
       font-size: 3em;
@@ -50,26 +51,21 @@ nav {
       text-shadow: -1px 0 $font-title-color, 0 1px $font-title-color, 1px 0 $font-title-color, 0 -1px $font-title-color;
     }
 
-   a:hover, .focus{
-      color:$font-title-color;
+    a:hover, .focus {
+      color: $font-title-color;
       text-shadow: 0 0 $font-title-color;
     }
 
   }
 }
-h1, h2, h3, h4{
+
+h1, h2, h3, h4 {
   font-family: $font-title-family;
   color: $font-title-color;
+  margin: 10px 0;
 }
-@keyframes menu {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-div.toggle{
+
+div.toggle {
   position: absolute;
   height: 4.6em;
   width: 4.6em;
@@ -81,33 +77,13 @@ div.toggle{
   z-index: 10;
   cursor: pointer;
 }
-.burger-menu{
-  position: relative;
-  width:4em;
-  height: 0.2em;
-  background-color: $font-title-color;
-  &:after, &:before{
-    position: absolute;
-    content:'';
-    width: 35px;
-    height: 100%;
-    background-color: inherit;
-    transform-origin: center center;
-    transition: transform .25s ease, top .25s ease, bottom .25s ease;
-    left:5px;
-  }
-  &:before{
-    top:-10px;
-  }
-  &:after{
-    bottom: -10px;
-  }
-}
-a{
-  color:$bck-body;
+
+a {
+  color: $bck-body;
   text-decoration: none;
 }
-div.heading{
+
+div.heading {
   position: absolute;
   min-height: 85vh;
   min-width: 85vw;
@@ -115,121 +91,158 @@ div.heading{
   flex-direction: column;
   justify-content: space-between;
   margin: 5em 7em;
-  border:5px solid $font-border-color;
+  border: 5px solid $font-border-color;
 }
-canvas{
-  margin:0 150px;
+
+canvas {
+  margin: 0 150px;
+  overflow: hidden;
 }
-section{
+
+section {
+  margin-bottom: 25px;
   border-bottom: 1px solid $font-border-color;
-  padding: 10px;
+  padding: 20px 0;
 }
-.facebook, .event, .library, .book{
-  font-size: 3em;
+
+
   .facebook__title, .event__title, .library__title, .book__title{
-    margin: 20px 0;
-    h2{
-      font-size: 2em;
+    padding: 0 10px;
+    h2 {
+      font-size: 5.236em;
       letter-spacing: -0.08em;
     }
-    p{
+    p {
       color: $font-title-color;
-      font-size: 1.3em;
+      margin-top: -5px;
+      font-size: 3.236em;
     }
   }
-
-  .txt{
-    text-align: left;
-    line-height: 45px;
-    font-size: 1em;
+.facebook__card, .event__card, .book__card, .library__card{
+  & a.btn-a{
+    font-size: 1.236em;
+    margin-left: calc(100% - 212px);
   }
 }
-.event{
-  .event__date{
-    display: flex;
-    p:nth-child(2){
-      align-self: flex-start;
-      margin-top: 30px;
-      font-size: 1em;
-    }
+.book__card{
+  position: relative;
+}
+.facebook__card {
+  margin: 50px 0;
+  &:first-child {
+    margin-top: 0;
   }
-  .event__subtitle{
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.txt {
+  text-align: left;
+  line-height: 35px;
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 0 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.event__date {
+  display: flex;
+  padding: 0 10px;
+  p:nth-child(2) {
     text-align: right;
+    margin-top: 30px;
+    font-size: 3.236em;
   }
-  .event__date__day{
-    font-size:4em;
-    font-family: $font-title-family;
-    color: $font-title-color;
+}
+.event__date__day {
+  font-size: 10.236em;
+  font-family: $font-title-family;
+  color: $font-title-color;
+}
+.event__subtitle {
+  font-size: 1em;
+  text-align: right;
+  padding: 0 10px;
+  & p{
+    font-size: 3.236em;
   }
-  .event__card{
-    h3{
-      font-size: 1.1em;
-    }
-    .txt{
-
-    }
+}
+h3 {
+  padding: 0 10px;
+    font-size: 3.854em;
+  &.event_name_artist{
+    font-size: 2.854em;
+    text-align: justify;
   }
 }
 
 
-  .library__hidden__txt{
-    max-height: 150px;
-    overflow: hidden;
-    opacity: 0.3;
+.library__hidden__txt {
+  margin-top: -5px;
+  max-height: 150px;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+a.btn-a {
+  width: max-content;
+  color: yellow;
+  flex-direction: row;
+  padding: 15px 10px;
+  border: 1px solid $font-border-color;
+}
+
+h1 {
+  font-size: 10em;
+  //margin: 0.5em;
+  color: $font-title-color;
+  font-family: $font-title-family;
+
+  display: flex;
+  //justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  span:nth-child(1) {
+    margin-right: auto;
+  }
+  span:nth-child(3) {
+    margin-right: auto;
   }
 
-  a.btn-a{
-    color: yellow;
-    font-size: 0.5em;
-    flex-direction: row;
+}
+
+h1:nth-child(2) {
+  margin-top: auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: column;
+  justify-content: stretch;
+  grid-column-gap: 20px;
+  .grid__img {
+    width: 100%;
+    height: 90%;
   }
-  /*
-  h1{
-    font-size: 10em;
-    //margin: 0.5em;
-    color: $font-title-color;
-    font-family: $font-title-family;
-
-    display: flex;
-    //justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    span:nth-child(1){
-      margin-right: auto;
+  @for $i from 1 through 6 {
+    .grid__img:nth-child(#{$i}) {
+      grid-column: #{$i}/#{$i+2};
     }
-    span:nth-child(3){
-      margin-right: auto;
-    }
-
   }
-  h1:nth-child(2) {
-    margin-top: auto;
-  }
-  */
-
-  .flex{
-    display: flex;
-    flex-direction: column;
-  }
-  .grid{
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-auto-flow: column;
-    justify-content: stretch;
-    grid-column-gap:20px;
-    .grid__img{
-      width: 100%;
-      height: 90%;
-    }
-    @for $i from 1 through 6{
-      .grid__img:nth-child(#{$i}){
-        grid-column: #{$i}/#{$i+2};
-      }
-    }
-  }
+}
 
 
 

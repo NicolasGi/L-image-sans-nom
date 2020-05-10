@@ -1,8 +1,15 @@
 @font-face {
-  font-family:'Novecento';
-  src: url("/dist/assets/font/Novecentowide-Bold.otf");
+  font-family:'Novecentowide-Bold';
+  src: url('./assets/font/novecento/Novecentowide-Bold.eot?#iefix') format('embedded-opentype'),
+  url("./assets/font/novecento/Novecentowide-Bold.otf") format('opentype'),
+  url("./assets/font/novecento/Novecentowide-Bold.ttf") format('truetype'),
+  url("./assets/font/novecento/Novecentowide-Bold.woff") format('woff'),
+  url("./assets/font/novecento/Novecentowide-Bold.woff2") format('woff2');
+  //src: url('./assets/font/novecento/Novecentowide-Bold.eot'); /* IE9 Compat Modes */
+
 }
-@font-face {
+/*@font-face {
   font-family: "Lexend";
-  src: url("/dist/assets/font/LexendDecaRegular.ttf");
-}
+  src: url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+}*/
