@@ -19,6 +19,7 @@ div.img{
   width: 4em;
   height: 0.2em;
   background-color: $font-title-color;
+  margin: 0 0 25px;
   &:after, &:before {
     position: absolute;
     content: '';

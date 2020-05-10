@@ -1,10 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <title>Contact | L'Image Sans Nom</title>
 </head>
-<body>
-$END$
+<body class="flex">
+<header>
+    <nav role="navigation">
+        <div class="toggle">
+            <span class="burger-menu"></span>
+        </div>
+
+        <ul class="flex hidden">
+            <li><a href="../../index.html" class="focus">accueil</a></li>
+            <li><a href="../../index.html">actualité</a></li>
+            <li><a href="./event.html">événement</a></li>
+            <li><a href="./library.html">bibliothéque</a></li>
+            <li><a href="./book.html">livre du mois</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main role="main" class="flex">
+    <section class="contact">
+        <div class="contact__form flex">
+            <div class="contact__title">
+                <h2 aria-level="2">Nous contacter</h2>
+            </div>
+            <form action="#" method="get" class="flex">
+                <label for="email">
+                    Email
+                    <input type="email" name="email" id="email" placeholder="votre-mail@gmail.com" required>
+                </label>
+                <label for="name">
+                    Nom Prénom
+                    <input type="text" name="name" id="name" placeholder="Jean Michel" required>
+                </label>
+                <label for="choose">
+                    Votre choix
+                    <select name="choose" id="choose">
+                        <option value="vernissage">Faire un vernissage</option>
+                        <option value="visite">Rendre visite</option>
+                        <option value="book" id="book">Livre du mois</option>
+                        <option value="other" id="other">Autre contexte</option>
+                    </select>
+                </label>
+                <label for="newsLetter" class="form__newsletter">
+                    Inscription à la newsletter
+                    <input type="checkbox" name="newsLetter" id="newsLetter">
+                    <span class="checkmark"></span>
+                </label>
+                <label for="submit">
+                    <input type="submit" name="submit" id="submit" value="Envoyez">
+                </label>
+            </form>
+        </div>
+        <div id="googleMap">
+
+        </div>
+    </section>
+
+</main>
+<script src="../main.js"></script>
+
 </body>
 </html>

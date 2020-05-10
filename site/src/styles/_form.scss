@@ -1,0 +1,81 @@
+.contact__title{
+  font-size: 3.236em;
+  padding: 0 10px;
+  margin-bottom: 25px;
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+  min-height: 50px;
+  font-size: 3.236em;
+  padding: 0 10px;
+  margin: 5px 0 15px;
+  color: $font-title-color;
+  input, select{
+    padding: 10px 10px;
+    background-color: $bck-body;
+    border: none;
+    color: white;
+    border-bottom: 2px solid $font-border-color;
+  }
+  &.form__newsletter {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2em;
+    font-family: $font-title-family;
+    padding-right: 40px;
+
+    .checkmark {
+      border: 1px solid $font-border-color;
+      position: absolute;
+      top: 0;
+      right: 15px;
+      height: 25px;
+      width: 25px;
+      background-color: $bck-body;
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid $bck-body;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      &:checked ~ .checkmark {
+        background-color: $font-title-color;
+        &:after {
+          display: block;
+        }
+      }
+      &:hover ~ .checkmark{
+        background-color: $font-border-color;
+      }
+    }
+  }
+}
+input[type=submit]{
+  background: none;
+  border: 1px solid $font-border-color;
+  color: $font-title-color;
+  font-family: $font-principal;
+  padding: 15px 15px;
+
+}
+::placeholder{
+  color: white;
+  opacity: 0.5;
+}
+
