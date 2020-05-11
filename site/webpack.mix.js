@@ -7,6 +7,8 @@ mix.sass('src/styles/style.scss', 'dist/').options({
 });
 mix.copyDirectory('src/assets/img/', 'dist/assets/img/');
 mix.copyDirectory('src/assets/font/', 'dist/assets/font/');
+mix.copyDirectory('src/assets/svg/', 'dist/assets/svg/');
+mix.copyDirectory('src/pages/', 'dist/pages/');
 
 // Full API
 // mix.js(src, output);
