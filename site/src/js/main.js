@@ -2,13 +2,14 @@ import controller from "./conttroler";
 
 const burger = document.querySelector('.burger-menu')
 
-    burger.addEventListener('click', (e)=>{
+    burger.addEventListener('click', ()=>{
     const ulElt = document.querySelector('ul.hidden')
     if(ulElt.style.position !== 'relative'){
         burger.style.transform = "rotate(180deg)"
         ulElt.style.position = 'relative'
         ulElt.style.textIndent = '0px'
         ulElt.style.overflow = 'visible'
+        ulElt.style.left = 0
         ulElt.classList.add('active')
     }else{
         burger.style.transform = "rotate(0deg)"
@@ -18,7 +19,7 @@ const burger = document.querySelector('.burger-menu')
         ulElt.classList.remove('active')
     }
 })
-/*
+
 const bck = {
     canvas: null,
     ctx:null,
@@ -87,4 +88,4 @@ const bck = {
     }
 }
 
-bck.init()*/
+bck.init()

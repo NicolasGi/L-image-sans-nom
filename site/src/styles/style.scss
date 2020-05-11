@@ -2,7 +2,7 @@
 $bck-body: #181818;
 $font-title-family: 'Novecentowide-Bold';
 $font-principal: 'Lexend Deca', sans-serif;
-$font-size: 62.5%;
+$font-size: 10px;
 $font-title-color: rgb(255, 230, 0);
 $font-border-color: rgba(255, 230, 0, 0.5);
 /* IMPORT */
@@ -15,9 +15,11 @@ $font-border-color: rgba(255, 230, 0, 0.5);
 
 /* HEADER */
 .hidden {
+  //background-color: $bck-body;
   overflow: hidden;
   text-indent: -9999px;
   position: absolute;
+  left: -320px
 }
 
 body {
@@ -106,7 +108,7 @@ section {
 }
 
 
-  .facebook__title, .event__title, .library__title, .book__title{
+  .facebook__title, .event__title, .library__title, .book__title, .header__title{
     padding: 0 10px;
     h2 {
       font-size: 5.236em;
@@ -118,7 +120,7 @@ section {
       font-size: 3.236em;
     }
   }
-.facebook__card, .event__card, .book__card, .library__card{
+.facebook__card, .event__card, .book__card, .library__card,.exhib__about, .header__about, .book__about {
   & a.btn-a{
     font-size: 1.236em;
     margin-left: calc(100% - 212px);
@@ -183,8 +185,15 @@ h3 {
     font-size: 2.854em;
     text-align: justify;
   }
-}
+  &.book__name__artist{
+    font-size: 2.854em;
+    padding: 0;
+  }
+  &.about__title{
+    font-size: 2.854em;
 
+  }
+}
 
 .library__hidden__txt {
   margin-top: -5px;
