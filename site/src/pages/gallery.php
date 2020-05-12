@@ -14,13 +14,13 @@
             <span class="burger-menu"></span>
         </div>
         <ul class="flex hidden">
-            <li><a href="../../index.html" >accueil</a></li>
-            <li><a href="../../index.html">actualité</a></li>
-            <li><a href="./event.html">événement</a></li>
-            <li><a href="./library.html">bibliothéque</a></li>
-            <li><a href="./book.html">livre du mois</a></li>
-            <li><a href="./about.html">à propos</a></li>
-            <li><a href="./contact.html">contact</a></li>
+            <li><a href="../../index.php" >accueil</a></li>
+            <li><a href="../../index.php">actualité</a></li>
+            <li><a href="event.php">événement</a></li>
+            <li><a href="library.php">bibliothéque</a></li>
+            <li><a href="book.php">livre du mois</a></li>
+            <li><a href="about.php">à propos</a></li>
+            <li><a href="contact.php">contact</a></li>
         </ul>
     </nav>
 </header>

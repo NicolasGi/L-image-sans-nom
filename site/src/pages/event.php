@@ -18,8 +18,8 @@
             <li><a href="../../index.html">actualité</a></li>
             <li><a href="#" class="focus">événement</a></li>
             <li><a href="./library.html">bibliothéque</a></li>
-            <li><a href="./book.html">livre du mois</a></li>
-            <li><a href="./about.html">à propos</a></li>
+            <li><a href="book.php">livre du mois</a></li>
+            <li><a href="about.php">à propos</a></li>
             <li><a href="./contact.html">contact</a></li>
         </ul>
     </nav>

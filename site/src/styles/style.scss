@@ -6,6 +6,7 @@ $font-size: 10px;
 $font-title-color: rgb(255, 230, 0);
 $font-border-color: rgba(255, 230, 0, 0.5);
 /* IMPORT */
+@import "desktop";
 @import "reset.scss";
 @import "font";
 @import "graphic";
@@ -14,12 +15,12 @@ $font-border-color: rgba(255, 230, 0, 0.5);
 @import "form";
 
 /* HEADER */
-.hidden {
+.hidden, div.heading {
   //background-color: $bck-body;
   overflow: hidden;
   text-indent: -9999px;
   position: absolute;
-  left: -320px
+  left: -320px;
 }
 
 body {
@@ -68,16 +69,17 @@ h1, h2, h3, h4 {
 }
 
 div.toggle {
-  position: absolute;
+  position: fixed;
   height: 4.6em;
   width: 4.6em;
-  right: 1.5em;
+  right: 1em;
   top: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
   cursor: pointer;
+  margin-top: 25px;
 }
 
 a {
@@ -85,21 +87,6 @@ a {
   text-decoration: none;
 }
 
-div.heading {
-  position: absolute;
-  min-height: 85vh;
-  min-width: 85vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 5em 7em;
-  border: 5px solid $font-border-color;
-}
-
-canvas {
-  margin: 0 150px;
-  overflow: hidden;
-}
 
 section {
   margin-bottom: 25px;
@@ -123,8 +110,9 @@ section {
 .facebook__card, .event__card, .book__card, .library__card,.exhib__about, .header__about, .book__about {
   & a.btn-a{
     font-size: 1.236em;
-    margin-left: calc(100% - 212px);
+    margin-left: auto;
     margin-top: 30px;
+    margin-right: 10px;
   }
 }
 .event__card:not(:last-child){
@@ -159,6 +147,10 @@ img {
 .event__date {
   display: flex;
   padding: 0 10px;
+  span{
+    color: $font-title-color;
+
+  }
   p:nth-child(2) {
     text-align: right;
     margin-top: 30px;
@@ -169,6 +161,7 @@ img {
   font-size: 10.236em;
   font-family: $font-title-family;
   color: $font-title-color;
+
 }
 .event__subtitle {
   font-size: 1em;
@@ -239,24 +232,28 @@ h1:nth-child(2) {
   flex-direction: column;
 }
 
-.grid {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-auto-flow: column;
-  justify-content: stretch;
-  grid-column-gap: 20px;
-  .grid__img {
-    width: 100%;
-    height: 90%;
-  }
-  @for $i from 1 through 6 {
-    .grid__img:nth-child(#{$i}) {
-      grid-column: #{$i}/#{$i+2};
+footer{
+  min-height: 25px;
+  padding: 15px;
+}
+ul{
+  &.footer__link{
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    font-size: 1.4em;
+    li{
+      margin:25px 0;
+      align-self: center;
+    }
+    a {
+      color: white;
     }
   }
 }
+
+
+
 
 
 
