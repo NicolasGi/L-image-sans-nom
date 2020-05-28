@@ -1,3 +1,3 @@
 <?php
-include './dist/pages/home.php';
+include './home.php';
 ?>

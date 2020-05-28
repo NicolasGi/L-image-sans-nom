@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
-    <title>Book | L'Image Sans Nom</title>
-</head>
-<body class="flex">
+<?php
+include ('header.php');
+?>
 <header>
     <nav role="navigation">
         <div class="toggle">
@@ -15,26 +8,27 @@
         </div>
 
         <ul class="flex hidden">
-            <li><a href="../../index.html">accueil</a></li>
-            <li><a href="../../index.html">actualité</a></li>
-            <li><a href="./event.html">événement</a></li>
-            <li><a href="./library.html">bibliothéque</a></li>
+            <li><a href="./home.php">accueil</a></li>
+            <li><a href="./event.php">événement</a></li>
+            <li><a href="./library.php">bibliothéque</a></li>
             <li><a href="#" class="focus">livre du mois</a></li>
-            <li><a href="about.php">à propos</a></li>
-            <li><a href="./contact.html">contact</a></li>
+            <li><a href="./about.php">à propos</a></li>
+            <li><a href="./contact.php">contact</a></li>
         </ul>
     </nav>
 </header>
 
 <main role="main" class="flex">
     <section class="book">
-        <div class="book__card flex">
-            <div class="book__title">
+        <div class="book__filing__card">
+
+            <div class="book__filing__title">
                 <h2 aria-level="2">Buenos aires XXMIII</h2>
-                <h3 class="book__name__artist">Mauricio Amarante</h3>
+                <h3 class="book__filing__name__artist">Mauricio Amarante</h3>
             </div>
+
             <div class="img">
-                <div class="flex">
+                <div class="">
                     <img src="" srcset="../assets/img/320/book-320.jpg 330w, ../assets/img/640/book-640.jpg 640w"
                          sizes="(min-width:980px) 50vw, (min-width: 640px) 50vw,  95vw" alt="" width="320" height="auto">
                     <!--<img src="" srcset="../assets/img/320/cathe-320.jpg 330w, ../assets/img/640/book-640.jpg 640w"
@@ -120,13 +114,19 @@
 </g>
 </svg>
             </div>
-            <p class="book_txt txt">
-                Mauricio vit en Europe depuis longtemps, il est musicien, il joue avec son frère César. Ils ont commencé dans la rue. Nous nous sommes rencontrés à Bordeaux. En 2013, il est retourné à Buenos Aires pour quelques semaines. Et puis il a prolongé son séjour. Par peur du retour ? </p>
-            <p class="book_txt txt">
-                Il se retrouve "seul" et emprunte un petit appareil photo à son neveu. <br>Il sort tous les jours afin de prendre des photos dans des quartiers modestes au sud de la capitale, des quartiers chauds peuplés de drogue et de prostitution. Cette pratique quotidienne devient passionnante. Il arpente les rues ; les chemins de son enfance, ses chemins actuels, il ne cesse de "filmer".
-            </p>
 
-            <a href="./contact.html" class="btn-a">Venir lire le livre</a>
+            <p class="book__filing__txt txt">
+                Mauricio vit en Europe depuis longtemps, il est musicien, il joue avec son frère César. Ils ont commencé dans la rue. Nous nous sommes rencontrés à Bordeaux. En 2013, il est retourné à Buenos Aires pour quelques semaines. Et puis il a prolongé son séjour. Par peur du retour ? </p>
+
+            <div class="book__filing__show">
+                <img src="../assets/img/book/buenos2_thumbnail.jpg" alt="" width="150">
+                <img src="../assets/img/book/buenos2_thumbnail.jpg" alt="" width="150">
+                <img src="../assets/img/book/buenos2_thumbnail.jpg" alt="" width="150">
+                <img src="../assets/img/book/buenos2_thumbnail.jpg" alt="" width="150">
+                <img src="../assets/img/book/buenos2_thumbnail.jpg" alt="" width="150">
+
+            </div>
+            <a href="contact.php" class="btn-a">Venir lire le livre</a>
         </div>
     </section>
 </main>
@@ -154,7 +154,6 @@
         })
     })
 </script> -->
-<script src="../main.js"></script>
-
-</body>
-</html>
+<?php
+include ('footer.php');
+?>

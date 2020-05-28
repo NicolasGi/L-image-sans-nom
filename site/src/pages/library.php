@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
-    <title>Bibliothèque | L'Image Sans Nom</title>
-</head>
+<?php
+require './header.php';
+?>
 <body class="flex">
 <header>
     <nav role="navigation">
@@ -14,22 +8,20 @@
             <span class="burger-menu"></span>
         </div>
         <ul class="flex hidden">
-            <li><a href="../../index.html">accueil</a></li>
-            <li><a href="../../index.html">actualité</a></li>
-            <li><a href="event.php">événement</a></li>
+            <li><a href="./home.php">accueil</a></li>
+            <li><a href="./event.php">événement</a></li>
             <li><a href="#" class="focus">bibliothéque</a></li>
-            <li><a href="book.php">livre du mois</a></li>
-            <li><a href="about.php">à propos</a></li>
-
-            <li><a href="./contact.html">contact</a></li>
+            <li><a href="./book.php">livre du mois</a></li>
+            <li><a href="./about.php">à propos</a></li>
+            <li><a href="./contact.php">contact</a></li>
         </ul>
     </nav>
 </header>
-<main>
+<main class="flex">
     <section class="library flex">
         <h2>Ici pose de la bibliothèque</h2>
     </section>
 </main>
-<script src="../main.js"></script>
-</body>
-</html>
+<?php
+require './footer.php';
+?>

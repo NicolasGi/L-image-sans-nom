@@ -1,22 +1,33 @@
 import controller from "./conttroler";
 
-const burger = document.querySelector('.burger-menu')
+const burger = document.querySelector('.toggle')
+const burgerSpan = document.querySelector('.burger-menu')
+const navElt = document.querySelector('nav')
+const ulElt = document.querySelector('nav ul')
+const bodyElt = document.querySelector('body')
 
-    burger.addEventListener('click', ()=>{
-    const ulElt = document.querySelector('ul.hidden')
+
+burger.addEventListener('click', ()=>{
     if(ulElt.style.position !== 'relative'){
-        burger.style.transform = "rotate(180deg)"
+
+        burgerSpan.style.transform = "rotate(180deg)"
         ulElt.style.position = 'relative'
         ulElt.style.textIndent = '0px'
         ulElt.style.overflow = 'visible'
         ulElt.style.left = 0
+        navElt.style.marginTop = '0'
         ulElt.classList.add('active')
+        navElt.classList.add('active')
+
     }else{
-        burger.style.transform = "rotate(0deg)"
+        burgerSpan.style.transform = "rotate(0deg)"
         ulElt.style.position = 'absolute'
         ulElt.style.textIndent = '-9999px'
         ulElt.style.overflow = 'none'
         ulElt.classList.remove('active')
+        navElt.classList.remove('active')
+
+
     }
 })
 
@@ -24,25 +35,35 @@ const bck = {
     canvas: null,
     ctx:null,
     img:[],
-    spriteUrl:'dist/assets/img/spriteSheet-compressor.jpg',
+    spriteUrl:'http://localhost:8080/dist/assets/img/spriteSheet.jpg',
     sprite: new Image(),
     x:50,
     y: 50,
     
     init(){
-        this.canvas = document.querySelector('canvas')
+
+        this.header = document.querySelector('header.home')
+        this.canvas = document.createElement('canvas')
+        this.canvas.width = '100%'
+        this.canvas.height = '100%'
+        window.addEventListener('load', ()=>{
+            this.resizeCanvas()
+        })
+
+        this.header.appendChild(this.canvas)
         this.ctx = this.canvas.getContext('2d')
-        controller.init(this)
-        this.canvas.width = window.innerWidth
-        this.canvas.height = window.innerHeight
+        controller.init(this);
+
         window.addEventListener('resize', ()=>{
             this.resizeCanvas()
         })
-        this.sprite.src = this.spriteUrl
-        this.sprite.addEventListener('load', ()=>{
 
-            this.animate()
-        })
+        this.sprite.src = this.spriteUrl
+        this.canvas.style.position = 'absolute'
+        this.canvas.style.top = '0'
+        this.canvas.style.left = '10%'
+        this.canvas.style.zIndex = '-5'
+        this.animate()
     },
     resizeCanvas(){
         this.canvas.width = window.innerWidth
@@ -80,11 +101,12 @@ const bck = {
 
     animate(){
         this.ctx.clearRect(0,0, this.canvas.width, this.canvas.height)
+
+        controller.update()
+        this.draw()
         window.requestAnimationFrame(()=>{
             this.animate()
         })
-        controller.update()
-        this.draw()
     }
 }
 

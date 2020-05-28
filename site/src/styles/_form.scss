@@ -1,8 +1,4 @@
-.contact__title{
-  font-size: 3.236em;
-  padding: 0 10px;
-  margin-bottom: 25px;
-}
+
 
 label{
   display: flex;
@@ -76,6 +72,25 @@ input[type=submit]{
 }
 ::placeholder{
   color: white;
-  opacity: 0.5;
+  opacity: 0.8;
 }
-
+input[type=checkbox]:focus{
+  outline: white solid 1px;
+}
+input[type=text]:focus{
+  border: 1px solid $font-border-color;
+}
+textarea{
+  font-size: 0.5em;
+  margin-top: 10px;
+  padding: 10px ;
+  background-color: $bck-body;
+  border-color: $font-border-color;
+  resize: none;
+  color: white;
+  transition: height 0.4s ease-in-out;
+  height: 75px;
+}
+textarea:focus{
+  height: 100%;
+}

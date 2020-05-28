@@ -6,7 +6,7 @@ div.img{
     width: 100%;
     height: 100%;
     top: 1rem;
-    left: -1.3rem;
+    left: -1.2rem;
     border: 4px solid $font-border-color;
     content: '';
     z-index: 2;
@@ -78,4 +78,21 @@ div.img{
   left: 50%;
 }
 
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px lighten($bck-body, 20%);
+  background: $bck-body;
+}
+::-webkit-scrollbar-thumb {
+  background: $font-title-color;
+}
 
+::-webkit-scrollbar-thumb:hover {
+  background: $font-border-color;
+}
+::-webkit-scrollbar-button{
+  background-color: $font-title-color;
+}

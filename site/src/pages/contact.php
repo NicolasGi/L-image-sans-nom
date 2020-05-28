@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
-    <title>Contact | L'Image Sans Nom</title>
-</head>
-<body class="flex">
+<?php
+require './header.php';
+?>
 <header>
     <nav role="navigation">
         <div class="toggle">
@@ -15,13 +8,12 @@
         </div>
 
         <ul class="flex hidden">
-            <li><a href="../../index.php">accueil</a></li>
-            <li><a href="../../index.php">actualité</a></li>
-            <li><a href="event.php">événement</a></li>
-            <li><a href="library.php">bibliothéque</a></li>
-            <li><a href="book.php">livre du mois</a></li>
-            <li><a href="about.php">à propos</a></li>
-            <li><a href="#" class="focus">contact</a></li>
+            <li><a tabindex="1" href="./home.php">accueil</a></li>
+            <li><a tabindex="2" href="./event.php">événement</a></li>
+            <li><a tabindex="3" href="./library.php">bibliothéque</a></li>
+            <li><a tabindex="4" href="./book.php">livre du mois</a></li>
+            <li><a tabindex="5" href="./about.php">à propos</a></li>
+            <li><a tabindex="6" href="#" class="focus">contact</a></li>
         </ul>
     </nav>
 </header>
@@ -34,28 +26,33 @@
             <form action="#" method="get" class="flex">
                 <label for="email">
                     Email
-                    <input type="email" name="email" id="email" placeholder="votre-mail@gmail.com" required>
+                    <input tabindex="7" type="email" name="email" id="email" placeholder="votre-mail@gmail.com" required>
                 </label>
                 <label for="name">
                     Nom Prénom
-                    <input type="text" name="name" id="name" placeholder="Jean Michel" required>
+                    <input tabindex="8" type="text" name="name" id="name" placeholder="Jean Michel" required>
                 </label>
                 <label for="choose">
                     Votre choix
-                    <select name="choose" id="choose">
+                    <select name="choose" id="choose" tabindex="9">
+                        <option value="choisissez une option">--choisissez une option--</option>
                         <option value="vernissage">Faire un vernissage</option>
                         <option value="visite">Rendre visite</option>
-                        <option value="book" id="book">Livre du mois</option>
+                        <option value="book" id="book">Voir un livre</option>
                         <option value="other" id="other">Autre contexte</option>
                     </select>
                 </label>
+                <label for="message">
+                    Votre message
+                    <textarea tabindex="10" name="message" id="message" cols="30" rows="10" placeholder="Précisez pourquoi vous voulez nous contacter" required></textarea>
+                </label>
                 <label for="newsLetter" class="form__newsletter">
                     Inscription à la newsletter
-                    <input type="checkbox" name="newsLetter" id="newsLetter">
+                    <input tabindex="11" type="checkbox" name="newsLetter" id="newsLetter">
                     <span class="checkmark"></span>
                 </label>
                 <label for="submit">
-                    <input type="submit" name="submit" id="submit" value="Envoyez">
+                    <input tabindex="12" type="submit" name="submit" id="submit" value="Envoyez">
                 </label>
             </form>
         </div>
@@ -66,6 +63,6 @@
         </div>
     </section>
 </main>
-<script src="../main.js"></script>
-</body>
-</html>
+<?php
+require './footer.php';
+?>

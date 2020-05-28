@@ -1,0 +1,247 @@
+@media screen and (min-width: 500px) {
+  body {
+   /* background: linear-gradient(90deg, yellow .1em, transparent 0);// line yellow
+    background-size: calc((100vw / 2));
+    background-position:110%;
+    display: grid;
+    justify-content: center;*/
+    &.grid {
+      display: grid;
+      //max-width: 75vw;
+      margin: 0 4% 0 16%;
+      border-right: 1px solid $font-border-color;
+
+    }
+    .event__date {
+      p:nth-child(2) {
+        font-size: 4.236em;
+        margin-top: 18px;
+      }
+    }
+  }
+  // add grid template
+}
+
+@media screen and (min-width: 640px) { // a changer au dessus de 1024px
+  body.grid {
+    //max-width: 75vw;
+  }
+  nav {
+    //background-color: darken($bck-body, 2%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 80vh;
+    z-index: 2;
+    width: 15%;
+    div.toggle, .burger-menu{
+      display: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+      cursor: none;
+    }
+    ul.flex{
+      li{
+        text-align: left;
+      }
+    }
+    .hidden {
+      background-color: darken($bck-body, 2%);
+      margin-top: auto;
+      padding: 25px 20px;
+      text-indent: 0;
+      overflow: visible;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      left: 0;
+      border-right: 0.8px solid yellow;
+    }
+  }
+
+  main {
+    h3 {
+      padding: 0;
+      margin: 0.5em 0;
+    }
+    .facebook__feed {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+    }
+    .facebook__title, .event__title, .library__title, .book__title, .contact__title {
+      grid-column: 3/ span 5;
+      padding: 0;
+
+    }
+    .facebook__card:nth-child(2) {
+      grid-row: 2;
+      grid-column: 4/ span 4;
+      a {
+        font-size: 1.5em;
+        padding: 1.2em 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .facebook__card:nth-child(3) {
+      grid-row: 2/4;
+      grid-column: 9 / span 4;
+
+    }
+    .facebook__card {
+      padding: 20px;
+      border-radius: 50px;
+      .txt {
+        padding: 0;
+      }
+    }
+    .event, .library, .book{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 10px;
+      overflow: hidden;
+      padding: 25px 0;
+      min-height: 100vh;
+    }
+    .event__info {
+      grid-column: 4 / span 3;
+      padding: 0 0 25px 0;
+      margin: 0;
+      &:nth-child(3) {
+        grid-column: 8 / span 3;
+      }
+      &:nth-child(4) {
+        grid-column: 12 / span 2;
+      }
+    }
+    .event__date {
+      order: 1;
+      font-size: 0.8em;
+    }
+    .event__subtitle {
+      order: 2;
+    }
+    .event__card {
+      position: relative;
+      order: 3;
+      a.btn-a {
+        opacity: 0; // change option
+        font-size: 2em;
+        padding: 0.5em;
+        background-color: $bck-body;
+        &:hover {
+          background-color: $font-title-color;
+        }
+      }
+    }
+    .event__txt {
+      position: absolute;
+      z-index: -1;
+      opacity: 0.5;
+      bottom: 0;
+    }
+    .library {
+      grid-template-rows: minmax(max-content, 150px) 1fr;
+    }
+    .library__card, .book__card {
+      grid-column: 4/13;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: minmax(max-content, 500px) 1fr;
+      grid-gap: 10px;
+      justify-content: space-between;
+      h3 {
+        grid-column: 1/span 3;
+        grid-row: 1;
+        height: min-content;
+        margin: 0;
+      }
+      a.btn-a {
+        background-color: $bck-body;
+        grid-row: 1;
+        margin: auto 0 0;
+        grid-column: 1/span 3;
+        font-size: 1.8em;
+
+        &:hover {
+          background-color: $font-border-color;
+        }
+      }
+      .img {
+        grid-column: 4/span 6;
+        position: relative;
+        grid-row: 1/2;
+        img {
+          object-fit: fill;
+        }
+      }
+      p {
+        grid-column: 1/span 5;
+        grid-row: 1/2;
+        padding: 0;
+        margin: auto 0;
+        .library__hidden__txt {
+          position: relative;
+        }
+      }
+    }
+    .contact{
+      padding:0 50px ;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      .contact__title{
+        margin-bottom: 40px;
+      }
+      #googleMap{
+        align-self: flex-end;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  header.home {
+    padding: 2em 0;
+    min-height: 90vh; //find solution, just home page with a height
+    position: relative;
+  }
+  div.title {
+    position: absolute;
+    text-indent: 0;
+    overflow: visible;
+    min-height: 85vh;
+    min-width: 100%;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    font-size: 10em;
+    font-family: 'Novecentowide-Bold', sans-serif;
+    color: $font-title-color;
+    margin: 25px 0;
+    padding: 25px 0;
+    //border: 1px solid yellow;
+    border-right: none;
+    border-left: none;
+    span:nth-child(even) {
+      margin-left: auto;
+    }
+    span:nth-child(3), span:nth-child(4) {
+      height: max-content;
+    }
+    span:nth-child(1), span:nth-child(3) {
+      padding-left: 25px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 980px) {
+}
+
+@media screen and (min-width: 1024px) {
+}
