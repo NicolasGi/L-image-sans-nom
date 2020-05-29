@@ -95,6 +95,7 @@
       border-radius: 50px;
       .txt {
         padding: 0;
+
       }
     }
     .event,
@@ -258,6 +259,16 @@
       #googleMap {
         align-self: flex-end;
         margin-bottom: 15px;
+      }
+    }
+    .library__txt, .book__txt{
+      padding: 20px 25px 15px 15px;
+
+      &:hover{
+        z-index: 5;
+        position: relative;
+        background-color: $bck-body;
+
       }
     }
   }
