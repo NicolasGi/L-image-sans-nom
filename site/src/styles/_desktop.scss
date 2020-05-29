@@ -1,10 +1,10 @@
 @media screen and (min-width: 500px) {
   body {
-   /* background: linear-gradient(90deg, yellow .1em, transparent 0);// line yellow
-    background-size: calc((100vw / 2));
-    background-position:110%;
-    display: grid;
-    justify-content: center;*/
+    /* background: linear-gradient(90deg, yellow .1em, transparent 0);// line yellow
+     background-size: calc((100vw / 2));
+     background-position:110%;
+     display: grid;
+     justify-content: center;*/
     &.grid {
       display: grid;
       //max-width: 75vw;
@@ -22,7 +22,7 @@
   // add grid template
 }
 
-@media screen and (min-width: 640px) { // a changer au dessus de 1024px
+@media screen and (min-width: 1280px) { // a changer au dessus de 1024px
   body.grid {
     //max-width: 75vw;
   }
@@ -34,15 +34,15 @@
     min-height: 80vh;
     z-index: 2;
     width: 15%;
-    div.toggle, .burger-menu{
+    div.toggle, .burger-menu {
       display: none;
       position: absolute;
       width: 0;
       height: 0;
       cursor: none;
     }
-    ul.flex{
-      li{
+    ul.flex {
+      li {
         text-align: left;
       }
     }
@@ -97,7 +97,8 @@
         padding: 0;
       }
     }
-    .event, .library, .book{
+    .event,
+    .library, .book {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-gap: 10px;
@@ -105,16 +106,72 @@
       padding: 25px 0;
       min-height: 100vh;
     }
+
     .event__info {
-      grid-column: 4 / span 3;
+      grid-row: 2;
       padding: 0 0 25px 0;
       margin: 0;
+      cursor: pointer;
+      &:nth-child(2){
+        grid-column: 4 / span 3;
+      }
       &:nth-child(3) {
         grid-column: 8 / span 3;
       }
       &:nth-child(4) {
         grid-column: 12 / span 2;
       }
+      &:hover { // fix bug for last event
+        grid-column: 4 / span 8;
+        cursor: default;
+        z-index: 2;
+        background-color: darken($bck-body, 2%);
+        padding:0 20px;
+        border-radius: 3px;
+        transition: all 0.1s ease-in-out;
+        .event__date{
+          .event__date__day{
+            margin: auto;
+          }
+          p:nth-child(2){
+            margin-left: auto;
+
+          }
+        }
+        .event__card{
+          display: grid;
+          grid-gap: 10px;
+          grid-template-areas:
+                  "img img img name"
+                  "img img img txt"
+                  "img img img link";
+        }
+        .event_name_artist{
+          grid-area:name;
+          margin-left: auto;
+          margin-right: 10px;
+        }
+        .img{
+          grid-area:img;
+        }
+        .txt{
+          grid-area:txt;
+          position: relative;
+          opacity: 1;
+          font-size: 1.5rem;
+          line-height: 42px;
+          margin-bottom: auto;
+        }
+        .btn-a{
+          grid-area:link;
+          opacity: 1;
+          padding: 25px;
+          height: max-content;
+          border-radius: 3px;
+        }
+      }
+
+
     }
     .event__date {
       order: 1;
@@ -126,6 +183,7 @@
     .event__card {
       position: relative;
       order: 3;
+      width: 100%;
       a.btn-a {
         opacity: 0; // change option
         font-size: 2em;
@@ -135,6 +193,7 @@
           background-color: $font-title-color;
         }
       }
+
     }
     .event__txt {
       position: absolute;
@@ -142,6 +201,7 @@
       opacity: 0.5;
       bottom: 0;
     }
+
     .library {
       grid-template-rows: minmax(max-content, 150px) 1fr;
     }
@@ -188,22 +248,19 @@
         }
       }
     }
-    .contact{
-      padding:0 50px ;
+    .contact {
+      padding: 0 50px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      .contact__title{
+      .contact__title {
         margin-bottom: 40px;
       }
-      #googleMap{
+      #googleMap {
         align-self: flex-end;
         margin-bottom: 15px;
       }
     }
   }
-}
-
-@media screen and (min-width: 800px) {
   header.home {
     padding: 2em 0;
     min-height: 90vh; //find solution, just home page with a height
@@ -219,7 +276,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    font-size: 10em;
+    font-size: 10rem;
     font-family: 'Novecentowide-Bold', sans-serif;
     color: $font-title-color;
     margin: 25px 0;
